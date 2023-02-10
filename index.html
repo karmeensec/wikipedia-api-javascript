@@ -10,12 +10,35 @@
 
     <link rel="stylesheet" href="./style.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script defer src="./app.js"></script>
 
 </head>
 
 <body>
     
+    <div class="container">
+
+        <header>
+
+            <img src='./img/wikipedia-logo.png' alt="wikipedia logo" width="200" class="header__image" />
+
+            <h1 class="header__title">Wikipedia API</h1>
+
+            <div class="header__search-bar">
+
+                <input type="text" id="input" aria-label="Search anything..." class="search-bar__input" placeholder="Search anything..." autofocus required />
+                
+                <button id="submit" type="button" class="search-bar__button" aria-label="search"> <i class="fa-sharp fa-solid fa-magnifying-glass"></i> </button>
+
+            </div>
+
+        </header>
+
+    </div>
+
+
 </body>
 
 </html>
