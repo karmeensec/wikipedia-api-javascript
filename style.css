@@ -6,5 +6,61 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inknut Antiqua', serif;
+    transition: all .2s ease-in-out;
+}
 
+
+body {
+    font-size: 1rem;
+    
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    margin-top: 1rem;
+}
+
+.header__image {
+    max-width: 300px;
+    width: 100%;
+}
+
+.header__title {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.header__search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: .1rem;
+    border-radius: .5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+}
+
+.header__search-bar:hover {
+    transform: scale(1.01);
+}
+
+.search-bar__input {
+    font-size: 1rem;
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    outline: none;
+}
+
+.search-bar__button {
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    margin-left: 2rem;
 }
