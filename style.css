@@ -64,3 +64,8 @@ body {
     background: transparent;
     margin-left: 2rem;
 }
+
+.search-bar__input:disabled,
+.search-bar__button:disabled {
+    cursor: not-allowed;
+}
