@@ -32,3 +32,18 @@ const checkEmptyInput = (input) => {
     else return false;
 
 }
+
+
+const endpoint = 'https://en.wikipedia.org/w/api.php?';
+
+const params = {
+    action: 'query',
+    format: 'json',
+    origin: '*',
+    prop: 'extracts',
+    exchars: '300',
+    exintro: true,
+    explaintext: true,
+    generator: 'search',
+    gsrlimit: 30,
+}
