@@ -4,6 +4,23 @@ const error = document.querySelector('#error');
 const results = document.querySelector('#results');
 
 
+// API params
+
+const endpoint = 'https://en.wikipedia.org/w/api.php?';
+
+const params = {
+    action: 'query',
+    format: 'json',
+    origin: '*',
+    prop: 'extracts',
+    exchars: '300',
+    exintro: true,
+    explaintext: true,
+    generator: 'search',
+    gsrlimit: 30,
+}
+
+
 // Helpers
 
 const disableUI = () => {
@@ -34,16 +51,9 @@ const checkEmptyInput = (input) => {
 }
 
 
-const endpoint = 'https://en.wikipedia.org/w/api.php?';
+const registerEvents = () => {
 
-const params = {
-    action: 'query',
-    format: 'json',
-    origin: '*',
-    prop: 'extracts',
-    exchars: '300',
-    exintro: true,
-    explaintext: true,
-    generator: 'search',
-    gsrlimit: 30,
+    input.addEventListener('keydown',);
+    btn.addEventListener('click',);
+
 }
