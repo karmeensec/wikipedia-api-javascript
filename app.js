@@ -50,10 +50,18 @@ const checkEmptyInput = (input) => {
 
 }
 
+const keyEvent = function(e) {
+
+    if (e.key === 'Enter') {
+        getData();
+    }
+
+}
+    
 
 const registerEvents = () => {
 
-    input.addEventListener('keydown',);
-    btn.addEventListener('click',);
+    input.addEventListener('keydown', keyEvent);
+    btn.addEventListener('click', getData);
 
 }
