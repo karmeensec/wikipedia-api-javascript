@@ -50,14 +50,17 @@ const checkEmptyInput = (input) => {
 
 }
 
-const getData = function() {
+const getData = async function() {
 
    const userInput = input.value;
 
    if (checkEmptyInput(userInput)) return;
 
-   params.gsearch = userInput;
+   params.gsrsearch = userInput;
    disableUI();
+
+   const {data} =  await axios.get(endpoint, {params});
+   console.log(data);
 
 }
 
