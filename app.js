@@ -50,10 +50,14 @@ const checkEmptyInput = (input) => {
 
 }
 
-const getData = function(e) {
+const getData = function() {
 
-    console.log(e);
-    console.log(e.data);
+   const userInput = input.value;
+
+   if (checkEmptyInput(userInput)) return;
+
+   params.gsearch = userInput;
+   disableUI();
 
 }
 
