@@ -50,6 +50,13 @@ const checkEmptyInput = (input) => {
 
 }
 
+
+const showError = (error) => {
+    error.innerHTML = `‼️ ${error} ‼️`;
+};
+
+
+
 const getData = async function() {
 
    const userInput = input.value;
@@ -59,8 +66,15 @@ const getData = async function() {
    params.gsrsearch = userInput;
    disableUI();
 
-   const {data} =  await axios.get(endpoint, {params});
-   console.log(data);
+   try {
+
+    const {data} =  await axios.get(endpoint, {params});
+
+   } catch (err){
+    showError(err);
+   } finally {
+    enableUI();
+   }
 
 }
 
