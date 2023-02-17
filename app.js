@@ -1,7 +1,7 @@
 const btn = document.querySelector('#submit');
 const input = document.querySelector('#input');
-const error = document.querySelector('#error');
-const results = document.querySelector('#results');
+const errorMessage = document.querySelector('#error');
+const resultsAll = document.querySelector('#results');
 
 
 // API params
@@ -13,11 +13,11 @@ const params = {
     format: 'json',
     origin: '*',
     prop: 'extracts',
-    exchars: '300',
+    exchars: 300,
     exintro: true,
     explaintext: true,
     generator: 'search',
-    gsrlimit: 30,
+    gsrlimit: 20,
 }
 
 
@@ -39,7 +39,8 @@ const enableUI = () => {
 
 const clearPrevResults = () => {
 
-    results.innerHTML = '';
+    resultsAll.innerHTML = '';
+    errorMessage.innerHTML = '';
 
 }
 
@@ -52,16 +53,16 @@ const checkEmptyInput = (input) => {
 
 
 const showError = (error) => {
-    error.innerHTML = `‼️ ${error} ‼️`;
+    errorMessage.innerHTML = `‼️ ${error} ‼️`;
 };
 
 
 
 const showResults = function(results) {
 
-    results.forEach( (result) => {
+    results.forEach( result => {
 
-        results.innerHTML += `
+        resultsAll.innerHTML += `
         
             <div id="results" class="results__item">
             
@@ -83,7 +84,7 @@ const gatherData = (pages) => {
 
     const results =  Object.values(pages).map( (page) => ({
 
-        pageId: page.pageId,
+        pageId: page.pageid,
         title: page.title,
         intro: page.extract,
 
@@ -103,6 +104,7 @@ const getData = async function() {
    if (checkEmptyInput(userInput)) return;
 
    params.gsrsearch = userInput;
+   clearPrevResults();
    disableUI();
 
    try {
